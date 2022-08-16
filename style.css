@@ -62,10 +62,10 @@ h1{
     transform: rotateY(180deg);
 }
 
-.card:hover .back-face {
+.rotate-back{
     transform: rotateY(0deg);
 }
 
-.card:hover .front-face {
+.rotate-front {
     transform: rotateY(-180deg);
 }
