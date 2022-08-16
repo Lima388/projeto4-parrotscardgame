@@ -3,6 +3,7 @@ const allCards = [];
 const selectedCards = [];
 let correct = 0;
 let plays = 0;
+
 function setUpGame(){
     const amount = Number(prompt("Com quantas cartas gostaria de jogar? (Insira números pares de 4 a 14)"));
     if(((amount)%2!==0)||(amount<4)||(amount>14)){
@@ -25,11 +26,13 @@ function setUpGame(){
         cardHolder.appendChild(allCards[i]);
     }
 }
+
 function cardClick(card){
     if(selectedCards.includes(card) || (selectedCards.length == 2)){
         return;
     }
     rotateCard(card);
+    plays++;
     selectedCards.push(card);
     if(selectedCards.length>1){
         if(selectedCards[0].id !== selectedCards[1].id){
@@ -48,13 +51,13 @@ function cardClick(card){
     };
     console.log(correct);
     if(correct*2 === allCards.length){
-        victory();
+        setTimeout(victory,500);
     }
-}
+}   
+
 function rotateCard(card){
     card.querySelector(".front-face").classList.toggle("rotate-front");
     card.querySelector(".back-face").classList.toggle("rotate-back");
-    plays++;
 }
 
 function copyCard(amount){
@@ -81,4 +84,5 @@ function comparador() {
 function victory(){
     alert(`Você ganhou em ${plays} jogadas!`);
 }
+
 window.onload = setUpGame;
