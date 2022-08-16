@@ -54,7 +54,7 @@ h1{
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-right: 100px;
     padding-left: 100px;
 }
@@ -68,4 +68,7 @@ h1{
 
 .rotate-front {
     transform: rotateY(-180deg);
+}
+.disabled{
+    display: none;
 }
