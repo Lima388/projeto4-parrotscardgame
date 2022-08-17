@@ -7,7 +7,7 @@ body{
 h1{
     box-sizing: border-box;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     font-size: 56px;
     color: #75B79E;
     align-self: center;
@@ -71,4 +71,13 @@ h1{
 }
 .disabled{
     display: none;
+}
+.timer{
+    align-self: flex-end;
+    margin-right: 100px;
+    margin-bottom: 15px;
+}
+#seconds, #tens{
+    font-size:2em;
+    color: #008105;
 }
