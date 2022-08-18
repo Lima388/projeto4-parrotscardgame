@@ -112,6 +112,10 @@ function restartGame(){
     const resposta = prompt("Gostaria de jogar novamente? (sim/não)");
     if(resposta === "sim"){
         setUpGame();
+    }else if(resposta === "não"){
+        return;
+    }else{
+        restartGame();
     }
 }
 
