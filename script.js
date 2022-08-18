@@ -142,8 +142,7 @@ function startTimer () {
       appendTens.innerHTML = "0" + tens;
     }
     if (tens > 9){
-      appendTens.innerHTML = tens;
-      
+      appendTens.innerHTML = tens; 
     } 
     if (tens > 99) {
       console.log("seconds");
