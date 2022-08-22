@@ -52,7 +52,6 @@ function cardClick(card){
             setTimeout(function(){
                 rotateCard(selectedCards[0]);
                 rotateCard(selectedCards[1]);
-                canClick = true;
                 selectedCards.length = 0;
             },1000);
         }else{
